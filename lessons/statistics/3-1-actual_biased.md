@@ -2,4 +2,4 @@
 
 >> REPLACE THIS TEXT WITH YOUR RESPONSE
 
-![PMF histogram](/img/2-01 exercise.png)
+![PMF histogram](https://github.com/enndy6285/dsp/blob/master/img/2-01%20exercise.png)
