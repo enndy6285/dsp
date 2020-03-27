@@ -47,4 +47,4 @@ License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
         main(*sys.argv)
 
 Explanation:
-Running the code above, the difference in mean birth weight between first babies and others is -0.125 lbs. The Cohen's d is -0.089. This is an opposite relationship compared to difference in pregnancy length
+Running the code above, the difference in mean birth weight between first babies and others is -0.125 lbs. The Cohen's d is -0.089. This is an opposite relationship compared to differences in pregnancy length. The Cohen's d for birth weight is also larger than the Cohen's d for pregnancy lenght, suggesting a greater effect size.
