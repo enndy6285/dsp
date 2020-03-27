@@ -2,4 +2,4 @@
 
 >> REPLACE THIS TEXT WITH YOUR RESPONSE
 
-![PMF histogram](img/2-01 exercise.png)
+![PMF histogram](/img/2-01 exercise.png)
