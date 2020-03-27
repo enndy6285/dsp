@@ -26,14 +26,6 @@ License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
         d = diff / math.sqrt(pooled_var)
         return d
 
-    def WeightDifferences(live, firsts, others):
-        """Explores the differences in birth weight between first babies and others"""
-    
-        mean_diff = firsts.totalwgt_lb.mean() - others.totalwgt_lb.mean()
-        cohen = CohenEffectSize(firsts.totalwgt_lb, others.totalwgt_lb)
-    
-        return mean_diff, cohen
-
     def main(script):
         """Tests the functions in this module.
 
@@ -41,13 +33,18 @@ License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
         """
         live, firsts, others = first.MakeFrames()
         hist = thinkstats2.Hist(live.prglngth)
+        
+        print('Difference in mean birth weight: ', firsts.totalwgt_lb.mean() - others.totalwgt_lb.mean())
+        print("Cohen's d: ", CohenEffectSize(firsts.totalwgt_lb,others.totalwgt_lb))
     
-        print('Difference in mean weight: ', WeightDifferences(live,firsts,others)[0])
-        print('Cohen D: ', WeightDifferences(live,firsts,others)[1])
-    
+        print('Difference in mean pregnancy length: ', firsts.prglngth.mean() - others.prglngth.mean())
+        print("Cohen's d: ", CohenEffectSize(firsts.prglngth,others.prglngth))
+     
         print('%s: All tests passed.' % script)
 
 
     if __name__ == '__main__':
         main(*sys.argv)
 
+Explanation:
+Running the code above, the difference in mean birth weight between first babies and others is -0.125 lbs. The Cohen's d is -0.089. This is an opposite relationship compared to difference in pregnancy length
